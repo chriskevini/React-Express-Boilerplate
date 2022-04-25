@@ -2,9 +2,7 @@ h1 {
     color: navy;
 }
 
-.studentToggles {
-    background-color: azure;
-}
+.studentToggles {}
 
 .tutorEventForm>* {
     padding-right: 2em;
