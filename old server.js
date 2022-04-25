@@ -34,13 +34,16 @@ app.post("/students", (req, res) => {
 
 app.post("/events", (req, res) => {
     Student.findOne({
-        _id: req.body.student,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
     }).exec((error, student) => {
         if (error) {
             res.status(500).json(error);
         } else if (!student) {
-            res.send("No student with that id found!");
+            res.send("No student with that name found!");
         } else {
+            req.body.student = student._id;
+            console.log(req.body.student);
             let event = new CalendarEvent(req.body);
 
             event.save((error) => {

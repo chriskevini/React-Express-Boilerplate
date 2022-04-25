@@ -1,0 +1,11 @@
+h1 {
+    color: navy;
+}
+
+.studentToggles {
+    background-color: azure;
+}
+
+.tutorEventForm>* {
+    padding-right: 2em;
+}
